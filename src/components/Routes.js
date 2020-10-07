@@ -8,15 +8,9 @@ import NotFound from "../pages/NotFound";
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/Quote-Machine">
-        <QuoteMachine />
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/Quote-Machine" component={QuoteMachine} />
+      <Route component={NotFound} />
     </Switch>
   );
 };
