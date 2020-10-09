@@ -9,7 +9,7 @@ const NavBar = () => {
     <header>
       <Navbar
         collapseOnSelect
-        bg="primary"
+        bg="dark"
         variant="dark"
         expand="xl"
         fixed="top"
@@ -22,6 +22,9 @@ const NavBar = () => {
             </LinkContainer>
             <LinkContainer exact to="/Quote-Machine">
               <Nav.Link>Quote Machine</Nav.Link>
+            </LinkContainer>
+            <LinkContainer exact to="/Markdown-Previewer">
+              <Nav.Link>Markdown Previewer</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

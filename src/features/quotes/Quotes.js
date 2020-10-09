@@ -15,10 +15,10 @@ const Quotes = () => {
   if (hasErrors) return <h2>Something went wrong...</h2>;
 
   return (
-    <section className="container">
-      <Jumbotron id="quote-box">
+    <div className="d-flex flex-column h-100 align-items-center justify-content-center text-center">
+      <Jumbotron id="quote-box" className="my-5 overflow-auto">
         <blockquote>
-          <p id="text" className="h5">
+          <p id="text" className="h5 overflow-auto">
             {quote}
           </p>
           <footer id="author" className="my-4">
@@ -28,20 +28,20 @@ const Quotes = () => {
 
         <Button
           id="new-quote"
-          variant="primary"
+          variant="dark"
           onClick={() => dispatch(getRandomQuotes())}
         >
           Random Quote
         </Button>
         <a
           id="tweet-quote"
-          className="d-block mt-4 h1"
-          href={`https://twitter.com/intent/tweet?text="${quote}"%20-${author}`}
+          className="d-block mt-4 h1 text-dark"
+          href={`https://twitter.com/intent/tweet?text="${quote}"%20-%20${author}`}
         >
           <FaTwitterSquare />
         </a>
       </Jumbotron>
-    </section>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { fetchQuotes } from "./features/quotes/quotesSlice";
 import NavBar from "./components/NavBar";
 import Routes from "./components/Routes";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <main className="bg-secondary">
+      <main className="container-fluid h-100 bg-secondary overflow-auto">
         <Routes />
       </main>
       <Footer />

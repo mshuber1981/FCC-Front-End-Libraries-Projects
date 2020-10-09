@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithubSquare, FaFreeCodeCamp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="d-flex flex-column fixed-bottom align-items-center bg-primary">
+    <footer className="d-flex flex-column align-items-center fixed-bottom bg-dark">
       <div className="h1 d-inline my-2">
         <a
           href="https://www.linkedin.com/in/michael-huber-9b567a173"

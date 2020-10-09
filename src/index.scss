@@ -1,0 +1,30 @@
+/*
+    https://create-react-app.dev/docs/adding-a-sass-stylesheet
+    https://create-react-app.dev/docs/adding-bootstrap/
+*/
+
+// https://eduardoboucas.github.io/include-media/
+@import "~include-media/dist/_include-media.scss";
+@import "~bootstrap/scss/bootstrap";
+
+/* General
+************************************************************** */
+html,
+body,
+#root {
+  height: 100%;
+}
+textarea {
+  resize: none;
+}
+#preview {
+  overflow-x: hidden;
+}
+
+/* Media Queries
+************************************************************** */
+@include media(">=phone", "<desktop") {
+  .markdown {
+    height: 50%;
+  }
+}
