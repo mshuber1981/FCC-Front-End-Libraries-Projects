@@ -9,11 +9,6 @@
 
 /* General
 ************************************************************** */
-html,
-body,
-#root {
-  height: 100%;
-}
 textarea {
   resize: none;
 }
@@ -24,7 +19,4 @@ textarea {
 /* Media Queries
 ************************************************************** */
 @include media(">=phone", "<desktop") {
-  .markdown {
-    height: 50%;
-  }
 }

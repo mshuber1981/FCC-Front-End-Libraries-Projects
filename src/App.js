@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <main className="container-fluid h-100 bg-secondary overflow-auto">
+      <main className="d-flex flex-column vh-100 align-items-center justify-content-center bg-light overflow-auto">
         <Routes />
       </main>
       <Footer />

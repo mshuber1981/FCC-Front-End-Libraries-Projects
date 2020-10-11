@@ -3,7 +3,7 @@ import Quotes from "../features/quotes/Quotes";
 
 const QuoteMAchine = () => {
   return (
-    <section className="h-100">
+    <section className="container text-center">
       <Quotes />
     </section>
   );

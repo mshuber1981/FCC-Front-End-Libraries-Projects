@@ -15,7 +15,6 @@ const Quotes = () => {
   if (hasErrors) return <h2>Something went wrong...</h2>;
 
   return (
-    <div className="d-flex flex-column h-100 align-items-center justify-content-center text-center">
       <Jumbotron id="quote-box" className="my-5 overflow-auto">
         <blockquote>
           <p id="text" className="h5 overflow-auto">
@@ -25,7 +24,6 @@ const Quotes = () => {
             — {author}
           </footer>
         </blockquote>
-
         <Button
           id="new-quote"
           variant="dark"
@@ -33,15 +31,15 @@ const Quotes = () => {
         >
           Random Quote
         </Button>
+        <div className="my-4" />
         <a
           id="tweet-quote"
-          className="d-block mt-4 h1 text-dark"
+          className="d-inline-block h1 text-dark"
           href={`https://twitter.com/intent/tweet?text="${quote}"%20-%20${author}`}
         >
           <FaTwitterSquare />
         </a>
       </Jumbotron>
-    </div>
   );
 };
 

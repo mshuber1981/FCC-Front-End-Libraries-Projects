@@ -26,6 +26,9 @@ const NavBar = () => {
             <LinkContainer exact to="/Markdown-Previewer">
               <Nav.Link>Markdown Previewer</Nav.Link>
             </LinkContainer>
+            <LinkContainer exact to="/Drum-Machine">
+              <Nav.Link>Drum Machine</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

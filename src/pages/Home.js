@@ -6,7 +6,7 @@ import { FaFreeCodeCamp } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <section className="d-flex flex-column h-100 align-items-center justify-content-center text-center">
+    <section className="d-flex flex-column vh-100 align-items-center justify-content-center text-center">
       <Jumbotron className="my-5 overflow-auto">
         <h1 className="display-4">Welcome!</h1>
         <p className="my-5">

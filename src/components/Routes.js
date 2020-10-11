@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import QuoteMachine from "../pages/QuoteMachine";
 import MarkdownPrev from "../pages/MarkdownPrev";
 import NotFound from "../pages/NotFound";
+import DrumMachine from "../pages/DrumMachine";
 
 const Routes = () => {
   return (
@@ -12,6 +13,7 @@ const Routes = () => {
       <Route exact path="/" component={Home} />
       <Route exact path="/Quote-Machine" component={QuoteMachine} />
       <Route exact path="/Markdown-Previewer" component={MarkdownPrev} />
+      <Route exact path="/Drum-Machine" component={DrumMachine} />
       <Route component={NotFound} />
     </Switch>
   );
