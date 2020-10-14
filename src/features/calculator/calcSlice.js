@@ -77,15 +77,16 @@ export const calcSlice = createSlice({
       }
     },
     handleEvaluate: (state) => {
-      while (endsWithOperator.test(state.formula)) {
-        state.formula = state.formula.slice(0, -1);
+      let expression = state.formula;
+      while (endsWithOperator.test(expression)) {
+        expression = expression.slice(0, -1);
       }
       let answer =
         // eslint-disable-next-line
         Math.round(1000000000000 * eval(state.formula)) / 1000000000000;
-      state.currentVal = answer.toString();
-      state.formula = state.formula + "=" + state.currentVal;
-      state.prevVal = state.currentVal;
+      state.currentVal = answer;
+      state.formula = expression + "=" + answer;
+      state.prevVal = answer;
       state.evaluated = true;
     },
   },
