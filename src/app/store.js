@@ -2,18 +2,20 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import quotesReducer from "../features/quotes/quotesSlice";
 import markdownReducer from "../features/markdown/markdownSlice";
-import drumReducer from "../features/drum/drumSlice"
+import drumReducer from "../features/drum/drumSlice";
+import calcReducer from "../features/calculator/calcSlice";
 
 export default configureStore({
   // https://redux-toolkit.js.org/usage/usage-guide#working-with-non-serializable-data
   middleware: getDefaultMiddleware({
     serializableCheck: {
-      ignoredActions: ["markdown/handleMarkdownChange"]
-    }
+      ignoredActions: ["markdown/handleMarkdownChange"],
+    },
   }),
   reducer: {
     quotes: quotesReducer,
     markdown: markdownReducer,
     drum: drumReducer,
+    calc: calcReducer,
   },
 });

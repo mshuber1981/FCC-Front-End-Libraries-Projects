@@ -15,8 +15,18 @@ textarea {
 #preview {
   overflow-x: hidden;
 }
+.jumbotron {
+  max-width: 50vw;
+}
 
 /* Media Queries
 ************************************************************** */
-@include media(">=phone", "<desktop") {
+@include media(">=phone", "<=tablet") {
+  .jumbotron {
+    min-width: 100vw;
+    margin-top: 1rem;
+    h1 {
+      display: none;
+    }
+  }
 }

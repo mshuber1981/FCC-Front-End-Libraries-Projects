@@ -7,13 +7,7 @@ import { Nav, Navbar } from "react-bootstrap";
 const NavBar = () => {
   return (
     <header>
-      <Navbar
-        collapseOnSelect
-        bg="dark"
-        variant="dark"
-        expand="xl"
-        fixed="top"
-      >
+      <Navbar collapseOnSelect bg="dark" variant="dark" expand="xl" fixed="top">
         <Navbar.Toggle className="ml-5" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="ml-5">
@@ -28,6 +22,9 @@ const NavBar = () => {
             </LinkContainer>
             <LinkContainer exact to="/Drum-Machine">
               <Nav.Link>Drum Machine</Nav.Link>
+            </LinkContainer>
+            <LinkContainer exact to="/Calculator">
+              <Nav.Link>Calculator</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
