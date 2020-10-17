@@ -2,6 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const isOperator = /[*/+-]/;
+const isOperatorNoNeg = /[*/+]/;
 const endsWithOperator = /[*/+-]$/;
 const endsWithNegativeSign = /[*/+]-$/;
 
@@ -22,28 +23,25 @@ export const calcSlice = createSlice({
     },
     handleNumbers: (state, { payload }) => {
       state.evaluated = false;
-      if (state.evaluated) {
-        state.currentVal = payload;
-        state.formula = payload !== "0" ? payload : "";
-      } else {
-        state.currentVal =
-          state.currentVal === "0" || isOperator.test(state.currentVal)
+      state.currentVal =
+        state.currentVal === "0" || isOperator.test(state.currentVal)
+          ? payload
+          : state.currentVal + payload;
+      state.formula =
+        state.currentVal === "0" && payload === "0"
+          ? state.formula === ""
             ? payload
-            : state.currentVal + payload;
-        state.formula =
-          state.currentVal === "0" && payload === "0"
-            ? state.formula === ""
-              ? payload
-              : state.formula
-            : /([^.0-9]0|^0)$/.test(state.formula)
-            ? state.formula.slice(0, -1) + payload
-            : state.formula + payload;
-      }
+            : state.formula
+          : /([^.0-9]0|^0)$/.test(state.formula)
+          ? state.formula.slice(0, -1) + payload
+          : state.formula + payload;
     },
     handleOperators: (state, { payload }) => {
-      state.currentVal = payload;
-      // state.evaluated = false;
-      if (state.evaluated) {
+      state.currentVal =
+        state.formula === "" && isOperatorNoNeg.test(payload) ? "0" : payload;
+      if (state.formula === "" && isOperatorNoNeg.test(payload)) {
+        state.formula = "";
+      } else if (state.evaluated) {
         state.formula = state.prevVal + payload;
       } else if (!endsWithOperator.test(state.formula)) {
         state.prevVal = state.formula;
@@ -77,6 +75,9 @@ export const calcSlice = createSlice({
       }
     },
     handleEvaluate: (state) => {
+      if (state.formula === "" || state.formula === "-") {
+        return;
+      }
       let expression = state.formula;
       while (endsWithOperator.test(expression)) {
         expression = expression.slice(0, -1);

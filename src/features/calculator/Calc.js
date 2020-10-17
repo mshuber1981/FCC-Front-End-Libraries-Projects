@@ -61,7 +61,9 @@ const Calc = () => {
               className="w-100 px-0 bg-warning"
               value="/"
               size="lg"
-              onClick={(event) => dispatch(handleOperators(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleOperators(event.currentTarget.value))
+              }
             >
               <FaDivide />
             </Button>
@@ -72,7 +74,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="7"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               7
             </Button>
@@ -83,7 +87,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="8"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               8
             </Button>
@@ -94,7 +100,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="9"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               9
             </Button>
@@ -105,7 +113,9 @@ const Calc = () => {
               className="w-100 px-0 bg-warning"
               value="*"
               size="lg"
-              onClick={(event) => dispatch(handleOperators(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleOperators(event.currentTarget.value))
+              }
             >
               <FaTimes />
             </Button>
@@ -116,7 +126,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="4"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               4
             </Button>
@@ -127,7 +139,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="5"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               5
             </Button>
@@ -138,7 +152,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="6"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               6
             </Button>
@@ -149,7 +165,9 @@ const Calc = () => {
               className="w-100 px-0 bg-warning"
               value="-"
               size="lg"
-              onClick={(event) => dispatch(handleOperators(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleOperators(event.currentTarget.value))
+              }
             >
               <FaMinus />
             </Button>
@@ -160,7 +178,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="1"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               1
             </Button>
@@ -171,7 +191,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="2"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               2
             </Button>
@@ -182,7 +204,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="3"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               3
             </Button>
@@ -193,7 +217,9 @@ const Calc = () => {
               className="w-100 px-0 bg-warning"
               value="+"
               size="lg"
-              onClick={(event) => dispatch(handleOperators(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleOperators(event.currentTarget.value))
+              }
             >
               <FaPlus />
             </Button>
@@ -204,7 +230,9 @@ const Calc = () => {
               className="w-100 px-0 bg-dark"
               value="0"
               size="lg"
-              onClick={(event) => dispatch(handleNumbers(event.target.value))}
+              onClick={(event) =>
+                dispatch(handleNumbers(event.currentTarget.value))
+              }
             >
               0
             </Button>
