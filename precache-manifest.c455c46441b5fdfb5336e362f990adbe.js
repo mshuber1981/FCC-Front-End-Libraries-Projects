@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5cb5afdb6c9e4c235881ea0db795f66c",
+    "revision": "11775a2113275f04abdd085bee3c1eb3",
     "url": "/FCC-Front-End-Libraries-Projects/index.html"
   },
   {
-    "revision": "bfc5e50b598d753cbf5e",
-    "url": "/FCC-Front-End-Libraries-Projects/static/css/main.8ca8b144.chunk.css"
+    "revision": "81ffa0297ae3c82a2768",
+    "url": "/FCC-Front-End-Libraries-Projects/static/css/main.f6f6698c.chunk.css"
   },
   {
     "revision": "fdf8b88852b36c9fa170",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/FCC-Front-End-Libraries-Projects/static/js/2.ac1ce1c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bfc5e50b598d753cbf5e",
-    "url": "/FCC-Front-End-Libraries-Projects/static/js/main.8eb22a1d.chunk.js"
+    "revision": "81ffa0297ae3c82a2768",
+    "url": "/FCC-Front-End-Libraries-Projects/static/js/main.2f78b7c8.chunk.js"
   },
   {
     "revision": "c3d4008e2651ffa46bd9",
