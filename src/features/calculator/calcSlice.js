@@ -83,6 +83,8 @@ export const calcSlice = createSlice({
         expression = expression.slice(0, -1);
       }
       let answer =
+        // Come up with a better way to handle evaluation
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
         // eslint-disable-next-line
         Math.round(1000000000000 * eval(state.formula)) / 1000000000000;
       state.currentVal = answer;

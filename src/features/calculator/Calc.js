@@ -18,13 +18,14 @@ const Calc = () => {
   const { currentVal, formula } = useSelector(calcSelector);
   const dispatch = useDispatch();
 
+  // Clear display when component unmounts
   useEffect(() => {
     dispatch(clearDisplay());
   }, [dispatch]);
 
   return (
     <>
-      <Jumbotron>
+      <Jumbotron className="calc">
         <h1 className="mb-4 text-center">
           Calculator{" "}
           <span role="img" aria-label="Calculator emoji">

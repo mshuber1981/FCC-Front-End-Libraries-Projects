@@ -15,31 +15,31 @@ const Quotes = () => {
   if (hasErrors) return <h2>Something went wrong...</h2>;
 
   return (
-      <Jumbotron id="quote-box" className="my-5 overflow-auto">
-        <blockquote>
-          <p id="text" className="h5 overflow-auto">
-            {quote}
-          </p>
-          <footer id="author" className="my-4">
-            — {author}
-          </footer>
-        </blockquote>
-        <Button
-          id="new-quote"
-          variant="dark"
-          onClick={() => dispatch(getRandomQuotes())}
-        >
-          Random Quote
-        </Button>
-        <div className="my-4" />
-        <a
-          id="tweet-quote"
-          className="d-inline-block h1 text-dark"
-          href={`https://twitter.com/intent/tweet?text="${quote}"%20-%20${author}`}
-        >
-          <FaTwitterSquare />
-        </a>
-      </Jumbotron>
+    <Jumbotron id="quote-box" className="my-5 overflow-auto">
+      <blockquote className="quotes">
+        <p id="text" className="h5 overflow-auto">
+          {quote}
+        </p>
+        <footer id="author" className="my-4">
+          — {author}
+        </footer>
+      </blockquote>
+      <Button
+        id="new-quote"
+        variant="dark"
+        onClick={() => dispatch(getRandomQuotes())}
+      >
+        Random Quote
+      </Button>
+      <div className="my-4" />
+      <a
+        id="tweet-quote"
+        className="d-inline-block h1 text-dark"
+        href={`https://twitter.com/intent/tweet?text="${quote}"%20-%20${author}`}
+      >
+        <FaTwitterSquare />
+      </a>
+    </Jumbotron>
   );
 };
 

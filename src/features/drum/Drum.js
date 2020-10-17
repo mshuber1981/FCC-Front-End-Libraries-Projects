@@ -38,7 +38,7 @@ const Drum = () => {
 
   return (
     <>
-      <Jumbotron id="drum-machine" className="text-center">
+      <Jumbotron id="drum-machine" className="drum text-center">
         <h1 className="mb-4">
           Drum Me{" "}
           <span role="img" aria-label="Speaker emoji">
