@@ -26,6 +26,9 @@ const NavBar = () => {
             <LinkContainer exact to="/Calculator">
               <Nav.Link>Calculator</Nav.Link>
             </LinkContainer>
+            <LinkContainer exact to="/Clock">
+              <Nav.Link>Clock</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

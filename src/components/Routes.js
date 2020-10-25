@@ -7,6 +7,7 @@ import MarkdownPrev from "../pages/MarkdownPrev";
 import NotFound from "../pages/NotFound";
 import DrumMachine from "../pages/DrumMachine";
 import Calculator from "../pages/Calculator";
+import ClockPage from "../pages/ClockPage";
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
       <Route exact path="/Markdown-Previewer" component={MarkdownPrev} />
       <Route exact path="/Drum-Machine" component={DrumMachine} />
       <Route exact path="/Calculator" component={Calculator} />
+      <Route exact path="/Clock" component={ClockPage} />
       <Route component={NotFound} />
     </Switch>
   );
