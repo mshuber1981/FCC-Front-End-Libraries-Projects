@@ -15,10 +15,17 @@ textarea {
 #preview {
   overflow-x: hidden;
 }
+
 /* Calculator
 ************************************************************** */
 .calc {
   max-width: 50vw;
+}
+
+/* Clock
+************************************************************** */
+.clock {
+  min-width: 60vh;
 }
 
 /* Media Queries
