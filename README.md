@@ -1,6 +1,4 @@
-# FCC JavaScript Algorithms and Data Structures Projects
-
-## Description
+# FCC Front End Libraries Projects
 
 My <a href="https://www.freecodecamp.org">freecodecamp.org</a> Front End Libraries Projects.
 
