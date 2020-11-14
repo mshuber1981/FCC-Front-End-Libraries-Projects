@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // https://react-bootstrap.github.io/components/jumbotron/
 import { Jumbotron } from "react-bootstrap";
 // https://react-icons.netlify.com/#/
@@ -16,6 +16,7 @@ import {
 } from "./clockSlice";
 
 const Clock = () => {
+  const [volumeLvl, setVolume] = useState(0.5);
   const { brkLength, seshLength, timerType, timer, timerState } = useSelector(
     clockSelector
   );
@@ -44,6 +45,7 @@ const Clock = () => {
   };
   // https://reactjs.org/docs/refs-and-the-dom.html
   let audioBeep = useRef(null);
+  let inputValue = useRef("50");
   const resetAll = () => {
     dispatch(reset());
     audioBeep.pause();
@@ -55,6 +57,9 @@ const Clock = () => {
       audioBeep.play();
     }
   }, [timer]);
+  useEffect(() => {
+    audioBeep.volume = volumeLvl;
+  }, [volumeLvl]);
 
   return (
     <Jumbotron className="clock text-center">
@@ -122,13 +127,28 @@ const Clock = () => {
       <button id="reset" onClick={() => resetAll()}>
         Reset
       </button>
+      {/* Some of the tests produce this audio error https://developers.google.com/web/updates/2017/06/play-request-was-interrupted */}
       <audio
-        id="beep"
         preload="auto"
         ref={(audio) => {
           audioBeep = audio;
         }}
         src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+      />
+      <br />
+      <h4>Alarm Volume</h4>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        ref={(valueAsNumber) => {
+          inputValue = valueAsNumber;
+        }}
+        onChange={() => {
+          setVolume(inputValue.value / 100);
+          console.log(volumeLvl);
+          console.log(audioBeep.volume);
+        }}
       />
     </Jumbotron>
   );
