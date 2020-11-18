@@ -10,7 +10,6 @@ export const clockSlice = createSlice({
     timerType: "Session",
     timer: 1500,
     intervalID: "",
-    alarmColor: { color: "white" },
   },
   reducers: {
     setBrkLength: (state, { payload }) => {

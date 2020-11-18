@@ -26,6 +26,9 @@ textarea {
 ************************************************************** */
 .clock {
   min-width: 60vh;
+  button {
+    border: none;
+  }
 }
 
 /* Media Queries
@@ -36,6 +39,11 @@ textarea {
     margin-top: 1rem;
     h1 {
       display: none;
+    }
+  }
+  .clock {
+    h3 {
+      font-size: larger;
     }
   }
 }
@@ -55,5 +63,9 @@ textarea {
     h1 {
       display: none;
     }
+  }
+  .clock {
+    margin: 10rem 0 4rem 0;
+    width: 75vw;
   }
 }

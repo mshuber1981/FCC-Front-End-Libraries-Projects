@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 // https://react-bootstrap.github.io/components/jumbotron/
-import { Jumbotron } from "react-bootstrap";
+import { Button, Jumbotron } from "react-bootstrap";
 // https://react-icons.netlify.com/#/
 import { FcPlus, FcMinus } from "react-icons/fc";
 import { useSelector, useDispatch } from "react-redux";
@@ -70,6 +70,7 @@ const Clock = () => {
             <div id="break-length" className="d-inline">
               <button
                 id="break-increment"
+                className="m-2"
                 value="+"
                 onClick={(event) =>
                   dispatch(setBrkLength(event.currentTarget.value))
@@ -80,6 +81,7 @@ const Clock = () => {
               {brkLength}
               <button
                 id="break-decrement"
+                className="m-2"
                 value="-"
                 onClick={(event) =>
                   dispatch(setBrkLength(event.currentTarget.value))
@@ -97,6 +99,7 @@ const Clock = () => {
             <div id="session-length" className="d-inline">
               <button
                 id="session-increment"
+                className="m-2"
                 value="+"
                 onClick={(event) =>
                   dispatch(setSeshLength(event.currentTarget.value))
@@ -107,6 +110,7 @@ const Clock = () => {
               {seshLength}
               <button
                 id="session-decrement"
+                className="m-2"
                 value="-"
                 onClick={(event) =>
                   dispatch(setSeshLength(event.currentTarget.value))
@@ -121,12 +125,24 @@ const Clock = () => {
 
       <h3 id="timer-label">{timerType}</h3>
       <h3 id="time-left">{clock()}</h3>
-      <button id="start_stop" onClick={() => timerControl()}>
+      <Button
+        id="start_stop"
+        className="m-2"
+        variant="secondary"
+        size="sm"
+        onClick={() => timerControl()}
+      >
         Start/Stop
-      </button>
-      <button id="reset" onClick={() => resetAll()}>
+      </Button>
+      <Button
+        id="reset"
+        className="m-2"
+        variant="secondary"
+        size="sm"
+        onClick={() => resetAll()}
+      >
         Reset
-      </button>
+      </Button>
       {/* Some of the tests produce this audio error https://developers.google.com/web/updates/2017/06/play-request-was-interrupted */}
       <audio
         preload="auto"
@@ -136,7 +152,7 @@ const Clock = () => {
         src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
       />
       <br />
-      <h4>Alarm Volume</h4>
+      <h5>Alarm Volume</h5>
       <input
         type="range"
         min="0"
