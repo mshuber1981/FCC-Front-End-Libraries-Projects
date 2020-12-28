@@ -3,7 +3,7 @@ import React from "react";
 const NotFound = () => {
   return (
     <div className="container">
-      <h1 className="d-flex flex-column vh-100 align-items-center justify-content-center text-white">
+      <h1 className="text-center">
         Sorry, page not found.
       </h1>
     </div>

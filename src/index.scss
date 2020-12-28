@@ -3,69 +3,100 @@
     https://create-react-app.dev/docs/adding-bootstrap/
 */
 
-// https://eduardoboucas.github.io/include-media/
-@import "~include-media/dist/_include-media.scss";
 @import "~bootstrap/scss/bootstrap";
+
+/* Home
+************************************************************** */
+#home {
+  p {
+    margin: 2rem 0 2rem 0;
+  }
+}
 
 /* Markdown
 ************************************************************** */
-textarea {
-  resize: none;
-}
-#preview {
-  overflow-x: hidden;
+#markdown {
+  textarea {
+    resize: none;
+  }
 }
 
 /* Calculator
 ************************************************************** */
-.calc {
-  max-width: 50vw;
+#calc {
+  .jumbotron {
+    max-width: 50vw;
+    #formula {
+      height: 70px;
+    }
+  }
 }
 
 /* Clock
 ************************************************************** */
-.clock {
-  min-width: 60vh;
-  button {
-    border: none;
+#clock {
+  max-width: 60vw;
+  .jumbotron {
+    button {
+      border: none;
+    }
   }
 }
 
 /* Media Queries
 ************************************************************** */
-@include media(">=phone", "<tablet") {
-  .calc {
-    min-width: 100vw;
-    margin-top: 1rem;
-    h1 {
-      display: none;
-    }
-  }
-  .clock {
-    h3 {
-      font-size: larger;
+@media only screen and (min-device-width: 320px) and (max-device-width: 320px) and (orientation: portrait) {
+  #clock {
+    .jumbotron {
+      h3 {
+        font-size: 1.15rem;
+      }
     }
   }
 }
-@include media(">=phone", "<desktop", "landscape") {
-  .quotes {
-    margin-top: 8rem;
-  }
-  .drum {
-    margin: 5rem 0 4rem 0;
-    h1 {
-      display: none;
+@media only screen and (min-device-width: 320px) and (max-device-width: 414px) and (orientation: portrait) {
+  #calc {
+    .jumbotron {
+      min-width: 100vw;
+      margin: 2rem 0 2.5rem 0;
+      h1 {
+        display: none;
+      }
     }
   }
-  .calc {
-    min-width: 100vw;
-    margin: 19rem 0 2.5rem 0;
-    h1 {
-      display: none;
+  #clock {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  #drum {
+    .jumbotron {
+      margin: 5rem 0 5rem 0;
     }
   }
-  .clock {
-    margin: 10rem 0 4rem 0;
-    width: 75vw;
+  #calc {
+    .jumbotron {
+      min-width: 100vw;
+      margin: 2rem 0 2.5rem 0;
+      h1 {
+        display: none;
+      }
+    }
+  }
+  #clock {
+    max-width: 80%;
+    .jumbotron {
+      margin: 4rem 0 5rem 0;
+    }
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape) {
+  #home {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      margin: 0.5rem 0 0.5rem 0;
+    }
   }
 }

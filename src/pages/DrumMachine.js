@@ -3,7 +3,7 @@ import Drum from "../features/drum/Drum";
 
 const DrumMachine = () => {
   return (
-    <section>
+    <section id="drum">
       <Drum />
     </section>
   );

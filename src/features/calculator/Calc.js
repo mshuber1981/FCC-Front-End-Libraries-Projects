@@ -25,7 +25,7 @@ const Calc = () => {
 
   return (
     <>
-      <Jumbotron className="calc">
+      <Jumbotron>
         <h1 className="mb-4 text-center">
           Calculator{" "}
           <span role="img" aria-label="Calculator emoji">
@@ -41,6 +41,7 @@ const Calc = () => {
             {currentVal}
           </Col>
           <Col
+            id="formula"
             className="m-0 py-3 border border-primary h2 text-right text-white"
             xs={12}
           >

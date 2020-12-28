@@ -6,10 +6,10 @@ import { FaFreeCodeCamp } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <section className="d-flex flex-column vh-100 align-items-center justify-content-center text-center">
-      <Jumbotron className="my-5 overflow-auto">
+    <section id="home">
+      <Jumbotron className="px-4 text-center">
         <h1 className="display-4">Welcome!</h1>
-        <p className="my-5">
+        <p className="lead">
           Thanks for checking out my spin on the{" "}
           <a href="https://www.freecodecamp.org/">freecodecamp.org</a> Front End
           Libraries Projects.

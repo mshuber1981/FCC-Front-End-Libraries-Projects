@@ -16,20 +16,20 @@ const Markdown = () => {
   const { markdown } = useSelector(markdownSelector);
 
   return (
-    <Row>
-      <Col className="mt-5 bg-light" lg={6} >
+    <Row className="my-5 py-5">
+      <Col className="bg-light" lg={6} >
       <textarea
         id="editor"
-        className="h-100 w-100 my-5 pt-5"
+        className="h-100 w-100 py-5"
         onChange={(event) => dispatch(handleMarkdownChange(event))}
         type="text"
         value={markdown}
       />
       </Col>
-      <Col className="mt-5 bg-light" lg={6} >
+      <Col className="bg-light" lg={6} >
       <div
         id="preview"
-        className="my-5 pt-5"
+        className="py-5"
         dangerouslySetInnerHTML={{
           __html: marked(markdown),
         }}

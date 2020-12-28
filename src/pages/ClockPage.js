@@ -3,7 +3,7 @@ import Clock from "../features/clock/Clock";
 
 const ClockPage = () => {
   return (
-    <section>
+    <section id="clock" className="container">
       <Clock />
     </section>
   );

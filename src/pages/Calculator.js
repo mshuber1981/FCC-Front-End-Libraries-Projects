@@ -3,7 +3,7 @@ import Calc from "../features/calculator/Calc";
 
 const Calculator = () => {
   return (
-    <section>
+    <section id="calc">
       <Calc />
     </section>
   );

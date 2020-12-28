@@ -3,7 +3,7 @@ import Markdown from "../features/markdown/Markdown";
 
 const MarkdownPrev = () => {
   return (
-    <section className="container-fluid overflow-auto">
+    <section className="container">
       <Markdown />
     </section>
   );

@@ -15,9 +15,9 @@ const Quotes = () => {
   if (hasErrors) return <h2>Something went wrong...</h2>;
 
   return (
-    <Jumbotron id="quote-box" className="my-5 overflow-auto">
+    <Jumbotron id="quote-box" className="my-5">
       <blockquote className="quotes">
-        <p id="text" className="h5 overflow-auto">
+        <p id="text" className="h5">
           {quote}
         </p>
         <footer id="author" className="my-4">
