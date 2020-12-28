@@ -62,7 +62,7 @@ const Clock = () => {
   }, [volumeLvl]);
 
   return (
-    <Jumbotron className="clock text-center">
+    <Jumbotron className="text-center">
       <div className="d-flex justify-content-around mb-5">
         <h3 id="break-label" className="">
           Break Length
@@ -145,6 +145,7 @@ const Clock = () => {
       </Button>
       {/* Some of the tests produce this audio error https://developers.google.com/web/updates/2017/06/play-request-was-interrupted */}
       <audio
+        id="beep"
         preload="auto"
         ref={(audio) => {
           audioBeep = audio;
