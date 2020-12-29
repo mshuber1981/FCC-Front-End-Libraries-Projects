@@ -45,15 +45,6 @@
 
 /* Media Queries
 ************************************************************** */
-@media only screen and (min-device-width: 320px) and (max-device-width: 320px) and (orientation: portrait) {
-  #clock {
-    .jumbotron {
-      h3 {
-        font-size: 1.15rem;
-      }
-    }
-  }
-}
 @media only screen and (min-device-width: 320px) and (max-device-width: 414px) and (orientation: portrait) {
   #calc {
     .jumbotron {
@@ -65,6 +56,11 @@
     }
   }
   #clock {
+    .jumbotron {
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
     max-width: 100%;
   }
 }
@@ -91,6 +87,10 @@
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape) {
+  .navbar {
+    max-height: 75vh;
+    overflow-y: auto;
+  }
   #home {
     h1 {
       font-size: 3rem;
