@@ -1,22 +1,13 @@
 {
-  "files": {
-    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.8018dbaa.chunk.css",
-    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.cc178479.chunk.js",
-    "main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.cc178479.chunk.js.map",
-    "runtime-main.js": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.cde858a9.js",
-    "runtime-main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.cde858a9.js.map",
-    "static/js/2.5bf50899.chunk.js": "/FCC-Front-End-Libraries-Projects/static/js/2.5bf50899.chunk.js",
-    "static/js/2.5bf50899.chunk.js.map": "/FCC-Front-End-Libraries-Projects/static/js/2.5bf50899.chunk.js.map",
-    "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
-    "precache-manifest.58ba6b441a6991b3e6a7ed162f9d58d2.js": "/FCC-Front-End-Libraries-Projects/precache-manifest.58ba6b441a6991b3e6a7ed162f9d58d2.js",
-    "service-worker.js": "/FCC-Front-End-Libraries-Projects/service-worker.js",
-    "static/css/main.8018dbaa.chunk.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.8018dbaa.chunk.css.map",
-    "static/js/2.5bf50899.chunk.js.LICENSE.txt": "/FCC-Front-End-Libraries-Projects/static/js/2.5bf50899.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.cde858a9.js",
-    "static/js/2.5bf50899.chunk.js",
-    "static/css/main.8018dbaa.chunk.css",
-    "static/js/main.cc178479.chunk.js"
-  ]
+  "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.c82247e8.chunk.css",
+  "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.af34838a.chunk.js",
+  "main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.af34838a.chunk.js.map",
+  "runtime~main.js": "/FCC-Front-End-Libraries-Projects/static/js/runtime~main.90c39cd4.js",
+  "runtime~main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/runtime~main.90c39cd4.js.map",
+  "static/js/2.6b68e912.chunk.js": "/FCC-Front-End-Libraries-Projects/static/js/2.6b68e912.chunk.js",
+  "static/js/2.6b68e912.chunk.js.map": "/FCC-Front-End-Libraries-Projects/static/js/2.6b68e912.chunk.js.map",
+  "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
+  "precache-manifest.73814318d528bca4b26e514834964ed1.js": "/FCC-Front-End-Libraries-Projects/precache-manifest.73814318d528bca4b26e514834964ed1.js",
+  "service-worker.js": "/FCC-Front-End-Libraries-Projects/service-worker.js",
+  "static/css/main.c82247e8.chunk.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.c82247e8.chunk.css.map"
 }
