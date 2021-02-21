@@ -1,13 +1,20 @@
 {
-  "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.c82247e8.chunk.css",
-  "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.af34838a.chunk.js",
-  "main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.af34838a.chunk.js.map",
-  "runtime~main.js": "/FCC-Front-End-Libraries-Projects/static/js/runtime~main.90c39cd4.js",
-  "runtime~main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/runtime~main.90c39cd4.js.map",
-  "static/js/2.6b68e912.chunk.js": "/FCC-Front-End-Libraries-Projects/static/js/2.6b68e912.chunk.js",
-  "static/js/2.6b68e912.chunk.js.map": "/FCC-Front-End-Libraries-Projects/static/js/2.6b68e912.chunk.js.map",
-  "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
-  "precache-manifest.73814318d528bca4b26e514834964ed1.js": "/FCC-Front-End-Libraries-Projects/precache-manifest.73814318d528bca4b26e514834964ed1.js",
-  "service-worker.js": "/FCC-Front-End-Libraries-Projects/service-worker.js",
-  "static/css/main.c82247e8.chunk.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.c82247e8.chunk.css.map"
+  "files": {
+    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.48c11f88.chunk.css",
+    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.a8c46f58.chunk.js",
+    "main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.a8c46f58.chunk.js.map",
+    "runtime-main.js": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.e4c820ae.js",
+    "runtime-main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.e4c820ae.js.map",
+    "static/js/2.93dd44f2.chunk.js": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js",
+    "static/js/2.93dd44f2.chunk.js.map": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js.map",
+    "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
+    "static/css/main.48c11f88.chunk.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.48c11f88.chunk.css.map",
+    "static/js/2.93dd44f2.chunk.js.LICENSE.txt": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4c820ae.js",
+    "static/js/2.93dd44f2.chunk.js",
+    "static/css/main.48c11f88.chunk.css",
+    "static/js/main.a8c46f58.chunk.js"
+  ]
 }
