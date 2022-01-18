@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.48c11f88.chunk.css",
-    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.a8c46f58.chunk.js",
-    "main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.a8c46f58.chunk.js.map",
-    "runtime-main.js": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.e4c820ae.js",
-    "runtime-main.js.map": "/FCC-Front-End-Libraries-Projects/static/js/runtime-main.e4c820ae.js.map",
-    "static/js/2.93dd44f2.chunk.js": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js",
-    "static/js/2.93dd44f2.chunk.js.map": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js.map",
+    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.70debcd6.css",
+    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.a6071103.js",
     "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
-    "static/css/main.48c11f88.chunk.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.48c11f88.chunk.css.map",
-    "static/js/2.93dd44f2.chunk.js.LICENSE.txt": "/FCC-Front-End-Libraries-Projects/static/js/2.93dd44f2.chunk.js.LICENSE.txt"
+    "main.70debcd6.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.70debcd6.css.map",
+    "main.a6071103.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.a6071103.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.e4c820ae.js",
-    "static/js/2.93dd44f2.chunk.js",
-    "static/css/main.48c11f88.chunk.css",
-    "static/js/main.a8c46f58.chunk.js"
+    "static/css/main.70debcd6.css",
+    "static/js/main.a6071103.js"
   ]
 }
