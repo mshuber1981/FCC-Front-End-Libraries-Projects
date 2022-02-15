@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.70debcd6.css",
+    "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.21c0b3ff.css",
     "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.a6071103.js",
     "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
-    "main.70debcd6.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.70debcd6.css.map",
+    "main.21c0b3ff.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.21c0b3ff.css.map",
     "main.a6071103.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.a6071103.js.map"
   },
   "entrypoints": [
-    "static/css/main.70debcd6.css",
+    "static/css/main.21c0b3ff.css",
     "static/js/main.a6071103.js"
   ]
 }
