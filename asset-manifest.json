@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.d31e985f.css",
-    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.66a68f2f.js",
+    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.57d19b78.js",
+    "static/media/fcc_tyekwf_ar_16_9,c_fill,g_auto__c_scale,w_1137.png": "/FCC-Front-End-Libraries-Projects/static/media/fcc_tyekwf_ar_16_9,c_fill,g_auto__c_scale,w_1137.232d623ddb7841c8b765.png",
+    "static/media/fcc_tyekwf_c_scale,w_1280.png": "/FCC-Front-End-Libraries-Projects/static/media/fcc_tyekwf_c_scale,w_1280.02485a92672b238bc60c.png",
     "static/media/free-code-camp.svg": "/FCC-Front-End-Libraries-Projects/static/media/free-code-camp.f8c13dd4c9826bd40b93d913b0c286b4.svg",
     "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
     "main.d31e985f.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.d31e985f.css.map",
-    "main.66a68f2f.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.66a68f2f.js.map"
+    "main.57d19b78.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.57d19b78.js.map"
   },
   "entrypoints": [
     "static/css/main.d31e985f.css",
-    "static/js/main.66a68f2f.js"
+    "static/js/main.57d19b78.js"
   ]
 }
