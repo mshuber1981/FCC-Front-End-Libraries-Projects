@@ -10,17 +10,15 @@ export default function NotFound() {
   return (
     <>
       <SEO title={pageTitle} />
-      <main>
-        <section className="section">
-          <Container className="d-flex">
-            <Title>
-              <h2>{pageTitle}</h2>
-              <div className="underline"></div>
-            </Title>
-          </Container>
-          <p>Sorry, page not found...</p>
-        </section>
-      </main>
+      <section className="section">
+        <Container className="d-flex">
+          <Title>
+            <h2>{pageTitle}</h2>
+            <div className="underline"></div>
+          </Title>
+        </Container>
+        <p>Sorry, page not found...</p>
+      </section>
     </>
   );
 }

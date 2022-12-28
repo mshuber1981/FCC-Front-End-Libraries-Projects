@@ -4,7 +4,8 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 // Components
 import GlobalStyles from "./components/GlobalStyles";
-import { NavBar } from "./components/globalStyledComponents";
+import NavBar from "./components/NavBar";
+import { Container } from "react-bootstrap";
 import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
@@ -28,6 +29,38 @@ const themes = {
     background: "#27272A",
   },
 };
+const navLinks = [
+  {
+    id: 1,
+    name: "Home",
+    route: "/",
+  },
+  {
+    id: 2,
+    name: "Random Quotes",
+    route: "/Random-Quotes",
+  },
+  {
+    id: 3,
+    name: "Markdown Previewer",
+    route: "/Markdown-Previewer",
+  },
+  {
+    id: 4,
+    name: "Drum Machine",
+    route: "/Drum-Machine",
+  },
+  {
+    id: 5,
+    name: "Calculator",
+    route: "/Calculator",
+  },
+  {
+    id: 6,
+    name: "Clock",
+    route: "/Clock",
+  },
+];
 
 export default function App() {
   const { theme, setTheme } = useAppContext();
@@ -71,17 +104,19 @@ export default function App() {
     <HashRouter>
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyles />
-        <NavBar />
+        <NavBar navLinks={navLinks} />
         <main>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/Random-Quotes" element={<QuoteMachine />} />
-            <Route path="/Markdown-Previewer" element={<MarkdownPrev />} />
-            <Route path="/Drum-Machine" element={<DrumMachine />} />
-            <Route path="/Calculator" element={<Calculator />} />
-            <Route path="/Clock" element={<Clock />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/Random-Quotes" element={<QuoteMachine />} />
+              <Route path="/Markdown-Previewer" element={<MarkdownPrev />} />
+              <Route path="/Drum-Machine" element={<DrumMachine />} />
+              <Route path="/Calculator" element={<Calculator />} />
+              <Route path="/Clock" element={<Clock />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Container>
         </main>
         <Footer />
       </ThemeProvider>
