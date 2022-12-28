@@ -49,6 +49,16 @@ a:hover {
         color: #45413C;
       }
 }
+
+.navbar-brand {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-brand {
+    visibility: visible;
+  }
+}
 `;
 
 export default GlobalStyles;

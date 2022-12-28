@@ -8,6 +8,12 @@ import { NavBar } from "./components/globalStyledComponents";
 import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
+import QuoteMachine from "./pages/QuoteMachine";
+import MarkdownPrev from "./pages/MarkdownPrev";
+import DrumMachine from "./pages/DrumMachine";
+import Calculator from "./pages/Calculator";
+import Clock from "./pages/Clock";
+import NotFound from "./pages/NotFound";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themes = {
@@ -69,8 +75,12 @@ export default function App() {
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            {/* <Route path="/Palindrome-Checker" element={<Palindrome />} /> */}
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="/Random-Quotes" element={<QuoteMachine />} />
+            <Route path="/Markdown-Previewer" element={<MarkdownPrev />} />
+            <Route path="/Drum-Machine" element={<DrumMachine />} />
+            <Route path="/Calculator" element={<Calculator />} />
+            <Route path="/Clock" element={<Clock />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
