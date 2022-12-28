@@ -1,9 +1,9 @@
-# FCC Front End Libraries Projects
+# FCC Front End Development Libraries Projects
 
-My <a href="https://www.freecodecamp.org">freecodecamp.org</a> Front End Libraries Projects.
+My [freecodecamp.org](https://www.freecodecamp.org) Front End Libraries Projects.
 
-See my profile <a href="https://www.freecodecamp.org/mshuber1981">here</a>.
+See my profile [here](https://www.freecodecamp.org/mshuber1981).
 
-### <a href="https://mshuber1981.github.io/FCC-Front-End-Libraries-Projects/">LIVE DEMO</a>
+## [LIVE DEMO](https://mshuber1981.github.io/FCC-Front-End-Libraries-Projects/)
 
-![Certificate](fcc.png)
+![Certificate](./public/fcc.png)
