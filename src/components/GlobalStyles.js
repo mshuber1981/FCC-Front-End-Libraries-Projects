@@ -12,8 +12,8 @@ Variables
   --primary-light: #80b280;
   --primary: #006400;
   --primary-dark: #003200;
-  --nav-height: 61px;
-  --min-footer-height: 7vh;
+  --nav-height: 61.5px;
+  --footer-height: 8vh;
   --transition: all 0.3s linear;
 }
 
@@ -28,36 +28,12 @@ body {
 }
 
 .section {
-  min-height: calc(93vh - var(--nav-height));
+  min-height: calc(100vh - 2 * var(--nav-height) - 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-.link-icons {
-  line-height: 0;
-  font-size: 2.25rem;
-  transition: var(--transition);
-  color: #FBFDFF;
-
-  &:hover {
-        color: #45413C;
-      }
-}
-
-.navbar-brand {
-  visibility: hidden;
-}
-
-@media screen and (min-width: 1200px) {
-  .navbar-brand {
-    visibility: visible;
-  }
+  margin: 1rem 0;
 }
 `;
 

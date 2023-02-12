@@ -1,8 +1,11 @@
 import React from "react";
 import { useAppContext } from "./appContext";
+import { useDispatch } from "react-redux";
+import { fetchQuotes } from "./features/quotes/quotesSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 // Components
+import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/GlobalStyles";
 import NavBar from "./components/NavBar";
 import { Container } from "react-bootstrap";
@@ -64,6 +67,12 @@ const navLinks = [
 
 export default function App() {
   const { theme, setTheme } = useAppContext();
+  const dispatch = useDispatch();
+
+  // Quotes
+  React.useEffect(() => {
+    dispatch(fetchQuotes());
+  }, [dispatch]);
 
   React.useEffect(
     function () {
@@ -74,6 +83,7 @@ export default function App() {
     [setTheme]
   );
 
+  // Styles for FCC test menu
   React.useEffect(function () {
     const input = document
       .querySelector("#fcc_test_suite_wrapper")
@@ -103,6 +113,7 @@ export default function App() {
   return (
     <HashRouter>
       <ThemeProvider theme={themes[theme]}>
+        <ScrollToTop />
         <GlobalStyles />
         <NavBar navLinks={navLinks} />
         <main>
