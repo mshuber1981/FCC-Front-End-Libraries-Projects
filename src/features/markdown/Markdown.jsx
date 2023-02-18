@@ -1,11 +1,17 @@
 import React from "react";
-// https://www.npmjs.com/package/marked
-import { marked } from "marked";
-// https://react-bootstrap.github.io/layout/grid/#responsive-grids
-import { Row, Col } from "react-bootstrap";
 // https://react-redux.js.org/api/hooks#using-hooks-in-a-react-redux-app
 import { useSelector, useDispatch } from "react-redux";
 import { handleMarkdownChange, markdownSelector } from "./markdownSlice";
+import styled from "styled-components";
+// https://www.npmjs.com/package/marked
+import { marked } from "marked";
+// Components
+import { Row, Col } from "react-bootstrap";
+
+const StyledTextArea = styled.textarea`
+  resize: none;
+  min-height: 10rem;
+`;
 
 const Markdown = () => {
   marked.setOptions({
@@ -16,17 +22,17 @@ const Markdown = () => {
   const { markdown } = useSelector(markdownSelector);
 
   return (
-    <Row className="my-5 py-5">
-      <Col className="bg-light" lg={6}>
-        <textarea
+    <Row className="">
+      <Col className="" lg={6}>
+        <StyledTextArea
           id="editor"
-          className="h-100 w-100 py-5"
+          className="h-100 w-100"
           onChange={(event) => dispatch(handleMarkdownChange(event))}
           type="text"
           value={markdown}
         />
       </Col>
-      <Col className="bg-light" lg={6}>
+      <Col className="" lg={6}>
         <div
           id="preview"
           className="py-5"

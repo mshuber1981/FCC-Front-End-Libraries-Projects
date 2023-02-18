@@ -2,6 +2,7 @@ import React from "react";
 // Components
 import { Container } from "react-bootstrap";
 import { Title } from "../components/globalStyledComponents";
+import Markdown from "../features/markdown/Markdown";
 
 export default function MarkdownPrev() {
   const pageTitle = "Markdown Previewer";
@@ -19,6 +20,9 @@ export default function MarkdownPrev() {
             <h2>{pageTitle}</h2>
             <div className="underline"></div>
           </Title>
+        </Container>
+        <Container>
+          <Markdown />
         </Container>
       </section>
     </>

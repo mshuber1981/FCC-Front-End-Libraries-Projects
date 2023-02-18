@@ -44,7 +44,7 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![React Logo w/ Text](https://techchronos.com/wp-content/uploads/SszarkLabs/stack-icon/cywBkaGwkMeDAuJbSt1k.png)
+![FCC Logo](https://mshuber1981.github.io/FCC-Front-End-Libraries-Projects/favicon-32x32.png)
 `;
 
 export const markdownSlice = createSlice({
