@@ -1,7 +1,5 @@
 import React, { useEffect, useCallback } from "react";
-// https://react-bootstrap.github.io/components/jumbotron/
-import { Button, Jumbotron, Row, Col } from "react-bootstrap";
-// https://react-redux.js.org/api/hooks#using-hooks-in-a-react-redux-app
+import { useAppContext } from "../../appContext";
 import { useSelector, useDispatch } from "react-redux";
 import {
   buttons,
@@ -10,8 +8,19 @@ import {
   handleKeyPress,
   clearDisplay,
 } from "./drumSlice";
+import styled from "styled-components";
+// Components
+import { Button, Col, Row } from "react-bootstrap";
+
+const StyledDiv = styled.div`
+  .drum-pad {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+`;
 
 const Drum = () => {
+  const { theme } = useAppContext();
   const { display } = useSelector(drumSelector);
   const dispatch = useDispatch();
 
@@ -38,23 +47,17 @@ const Drum = () => {
 
   return (
     <>
-      <Jumbotron id="drum-machine" className="text-center">
-        <h1 className="mb-4">
-          Drum Me{" "}
-          <span role="img" aria-label="Speaker emoji">
-            🔊
-          </span>
-        </h1>
+      <StyledDiv id="drum-machine" className="text-center">
         <h2 id="display">{display}</h2>
         {buttons.map((row, index) => (
-          <Row className="justify-content-around" key={index}>
+          <Row className="justify-content-evenly" key={index}>
             {row.map((col) => (
-              <Col className="m-2" key={col.id} xs={3}>
+              <Col className="my-2" key={col.id} xs={3}>
                 <Button
                   id={col.id}
                   className="drum-pad"
                   size="lg"
-                  variant="dark"
+                  variant={theme === "light" ? "outline-dark" : "outline-light"}
                   onClick={() => dispatch(playAudio(col))}
                 >
                   <audio
@@ -68,7 +71,7 @@ const Drum = () => {
             ))}
           </Row>
         ))}
-      </Jumbotron>
+      </StyledDiv>
     </>
   );
 };
