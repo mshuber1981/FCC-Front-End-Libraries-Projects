@@ -18,7 +18,7 @@ export default function DrumMachine() {
         <Container className="d-flex">
           <Title>
             <h2>
-              {pageTitle}
+              {pageTitle}{" "}
               <span role="img" aria-label="Speaker emoji">
                 🔊
               </span>
