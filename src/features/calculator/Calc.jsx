@@ -1,9 +1,4 @@
 import React, { useEffect } from "react";
-// https://react-bootstrap.github.io/components/jumbotron/
-import { Button, Jumbotron, Row, Col } from "react-bootstrap";
-// https://react-icons.netlify.com/#/
-import { FaDivide, FaTimes, FaMinus, FaPlus } from "react-icons/fa";
-// https://react-redux.js.org/api/hooks#using-hooks-in-a-react-redux-app
 import { useSelector, useDispatch } from "react-redux";
 import {
   calcSelector,
@@ -13,6 +8,22 @@ import {
   handleDecimal,
   handleEvaluate,
 } from "./calcSlice";
+import styled from "styled-components";
+// Icons
+import { Icon } from "@iconify/react";
+// Components
+import { Button, Row, Col } from "react-bootstrap";
+
+const StyledDiv = styled.div`
+  width: 20rem;
+  max-width: 85vw;
+
+  #display,
+  #formula {
+    height: 2.25rem;
+    overflow: hidden;
+  }
+`;
 
 const Calc = () => {
   const { currentVal, formula } = useSelector(calcSelector);
@@ -25,24 +36,18 @@ const Calc = () => {
 
   return (
     <>
-      <Jumbotron>
-        <h1 className="mb-4 text-center">
-          Calculator{" "}
-          <span role="img" aria-label="Calculator emoji">
-            📱
-          </span>
-        </h1>
+      <StyledDiv>
         <Row className="bg-dark border border-primary">
           <Col
             id="display"
-            className="m-0 py-3 border border-primary h2 text-right text-white"
+            className="m-0 border border-primary h3 text-white"
             xs={12}
           >
             {currentVal}
           </Col>
           <Col
             id="formula"
-            className="m-0 py-3 border border-primary h2 text-right text-white"
+            className="border border-primary h3 text-white"
             xs={12}
           >
             {formula}
@@ -67,7 +72,7 @@ const Calc = () => {
                 dispatch(handleOperators(event.currentTarget.value))
               }
             >
-              <FaDivide />
+              <Icon icon="fa-solid:divide" />
             </Button>
           </Col>
           <Col className="py-2" xs={3}>
@@ -119,7 +124,7 @@ const Calc = () => {
                 dispatch(handleOperators(event.currentTarget.value))
               }
             >
-              <FaTimes />
+              <Icon icon="fa-solid:times" />
             </Button>
           </Col>
           <Col className="py-2" xs={3}>
@@ -171,7 +176,7 @@ const Calc = () => {
                 dispatch(handleOperators(event.currentTarget.value))
               }
             >
-              <FaMinus />
+              <Icon icon="fa-solid:minus" />
             </Button>
           </Col>
           <Col className="py-2" xs={3}>
@@ -223,7 +228,7 @@ const Calc = () => {
                 dispatch(handleOperators(event.currentTarget.value))
               }
             >
-              <FaPlus />
+              <Icon icon="fa-solid:plus" />
             </Button>
           </Col>
           <Col className="py-2" xs={6}>
@@ -242,7 +247,7 @@ const Calc = () => {
           <Col className="py-2" xs={3}>
             <Button
               id="decimal"
-              className="w-100 px-0 bg-dark"
+              className="w-100 bg-dark"
               value="."
               size="lg"
               onClick={() => dispatch(handleDecimal())}
@@ -253,7 +258,7 @@ const Calc = () => {
           <Col className="py-2" xs={3}>
             <Button
               id="equals"
-              className="w-100 px-0 bg-warning"
+              className="w-100 bg-warning"
               value="="
               size="lg"
               onClick={() => dispatch(handleEvaluate())}
@@ -262,7 +267,7 @@ const Calc = () => {
             </Button>
           </Col>
         </Row>
-      </Jumbotron>
+      </StyledDiv>
     </>
   );
 };
