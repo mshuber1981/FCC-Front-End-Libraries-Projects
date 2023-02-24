@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/FCC-Front-End-Libraries-Projects/static/css/main.d31e985f.css",
-    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.9c437dbe.js",
+    "main.js": "/FCC-Front-End-Libraries-Projects/static/js/main.cc3e5437.js",
     "static/media/fcc_z9ruhh_ar_16_9,c_fill,g_auto__c_scale,w_1137.png": "/FCC-Front-End-Libraries-Projects/static/media/fcc_z9ruhh_ar_16_9,c_fill,g_auto__c_scale,w_1137.232d623ddb7841c8b765.png",
     "static/media/fcc_z9ruhh_c_scale,w_1280.png": "/FCC-Front-End-Libraries-Projects/static/media/fcc_z9ruhh_c_scale,w_1280.02485a92672b238bc60c.png",
     "index.html": "/FCC-Front-End-Libraries-Projects/index.html",
     "main.d31e985f.css.map": "/FCC-Front-End-Libraries-Projects/static/css/main.d31e985f.css.map",
-    "main.9c437dbe.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.9c437dbe.js.map"
+    "main.cc3e5437.js.map": "/FCC-Front-End-Libraries-Projects/static/js/main.cc3e5437.js.map"
   },
   "entrypoints": [
     "static/css/main.d31e985f.css",
-    "static/js/main.9c437dbe.js"
+    "static/js/main.cc3e5437.js"
   ]
 }
