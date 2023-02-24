@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-// https://react-bootstrap.github.io/components/jumbotron/
-import { Button, Jumbotron } from "react-bootstrap";
-// https://react-icons.netlify.com/#/
-import { FcPlus, FcMinus } from "react-icons/fc";
+import { useAppContext } from "../../appContext";
 import { useSelector, useDispatch } from "react-redux";
 import {
   clockSelector,
@@ -14,13 +11,31 @@ import {
   decrementTimer,
   reset,
 } from "./clockSlice";
+import styled from "styled-components";
+// Icons
+import { Icon } from "@iconify/react";
+// Components
+import { Button } from "react-bootstrap";
+
+const StyledDiv = styled.div`
+  max-width: 95vw;
+
+  .plus-minus {
+    width: 15rem;
+
+    .icon-button {
+      line-height: 0;
+    }
+  }
+`;
 
 const Clock = () => {
   const [volumeLvl, setVolume] = useState(0.5);
-  const { brkLength, seshLength, timerType, timer, timerState } = useSelector(
-    clockSelector
-  );
+  const { theme } = useAppContext();
+  const { brkLength, seshLength, timerType, timer, timerState } =
+    useSelector(clockSelector);
   const dispatch = useDispatch();
+
   const clock = () => {
     let minutes = Math.floor(timer / 60);
     let seconds = timer - minutes * 60;
@@ -29,6 +44,10 @@ const Clock = () => {
     // setCurrentTimer(minutes + ":" + seconds);
     return minutes + ":" + seconds;
   };
+
+  let audioBeep = useRef(null);
+  let inputValue = useRef("50");
+
   const timerControl = () => {
     if (timerState === "stopped") {
       dispatch(start());
@@ -43,92 +62,94 @@ const Clock = () => {
       dispatch(stop());
     }
   };
-  // https://reactjs.org/docs/refs-and-the-dom.html
-  let audioBeep = useRef(null);
-  let inputValue = useRef("50");
+
   const resetAll = () => {
     dispatch(reset());
     audioBeep.pause();
     audioBeep.currentTime = 0;
   };
+
   useEffect(() => {
     let currentTimer = timer;
     if (currentTimer === 0) {
       audioBeep.play();
     }
   }, [timer]);
+
   useEffect(() => {
     audioBeep.volume = volumeLvl;
   }, [volumeLvl]);
 
   return (
-    <Jumbotron className="text-center">
-      <div className="d-flex justify-content-around mb-5">
-        <h3 id="break-label" className="">
-          Break Length
+    <StyledDiv className="text-center">
+      <div className="d-flex mb-3">
+        <h3 id="break-label" className="plus-minus">
+          Break
+          <br />
+          Length
           <div className="d-flex flex-column text-center">
             <div id="break-length" className="d-inline">
               <button
                 id="break-increment"
-                className="m-2"
+                className="m-2 icon-button"
                 value="+"
                 onClick={(event) =>
                   dispatch(setBrkLength(event.currentTarget.value))
                 }
               >
-                <FcPlus />
+                <Icon icon="ic:baseline-plus" />
               </button>
               {brkLength}
               <button
                 id="break-decrement"
-                className="m-2"
+                className="m-2 icon-button"
                 value="-"
                 onClick={(event) =>
                   dispatch(setBrkLength(event.currentTarget.value))
                 }
               >
-                <FcMinus />
+                <Icon icon="ic:baseline-minus" />
               </button>
             </div>
           </div>
         </h3>
-
-        <h3 id="session-label" className="">
-          Session Length
+        <h3 id="session-label" className="plus-minus">
+          Session
+          <br />
+          Length
           <div className="d-flex flex-column text-center">
             <div id="session-length" className="d-inline">
               <button
                 id="session-increment"
-                className="m-2"
+                className="m-2 icon-button"
                 value="+"
                 onClick={(event) =>
                   dispatch(setSeshLength(event.currentTarget.value))
                 }
               >
-                <FcPlus />
+                <Icon icon="ic:baseline-plus" />
               </button>
               {seshLength}
               <button
                 id="session-decrement"
-                className="m-2"
+                className="m-2 icon-button"
                 value="-"
                 onClick={(event) =>
                   dispatch(setSeshLength(event.currentTarget.value))
                 }
               >
-                <FcMinus />
+                <Icon icon="ic:baseline-minus" />
               </button>
             </div>
           </div>
         </h3>
       </div>
-
       <h3 id="timer-label">{timerType}</h3>
       <h3 id="time-left">{clock()}</h3>
       <Button
         id="start_stop"
         className="m-2"
-        variant="secondary"
+        variant={theme === "light" ? "outline-dark" : "outline-light"}
         size="sm"
         onClick={() => timerControl()}
       >
@@ -137,7 +158,7 @@ const Clock = () => {
       <Button
         id="reset"
         className="m-2"
-        variant="secondary"
+        variant={theme === "light" ? "outline-dark" : "outline-light"}
         size="sm"
         onClick={() => resetAll()}
       >
@@ -152,8 +173,7 @@ const Clock = () => {
         }}
         src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
       />
-      <br />
-      <h5>Alarm Volume</h5>
+      <h5 className="mt-3">Alarm Volume</h5>
       <input
         type="range"
         min="0"
@@ -167,7 +187,7 @@ const Clock = () => {
           console.log(audioBeep.volume);
         }}
       />
-    </Jumbotron>
+    </StyledDiv>
   );
 };
 

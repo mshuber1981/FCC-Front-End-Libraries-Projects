@@ -16,7 +16,7 @@ import QuoteMachine from "./pages/QuoteMachine";
 import MarkdownPrev from "./pages/MarkdownPrev";
 import DrumMachine from "./pages/DrumMachine";
 import Calculator from "./pages/Calculator";
-import Clock from "./pages/Clock";
+import ClockPage from "./pages/ClockPage";
 import NotFound from "./pages/NotFound";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -124,7 +124,7 @@ export default function App() {
               <Route path="/Markdown-Previewer" element={<MarkdownPrev />} />
               <Route path="/Drum-Machine" element={<DrumMachine />} />
               <Route path="/Calculator" element={<Calculator />} />
-              <Route path="/Clock" element={<Clock />} />
+              <Route path="/Clock" element={<ClockPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Container>
