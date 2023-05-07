@@ -3,8 +3,12 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { handleMarkdownChange, markdownSelector } from "./markdownSlice";
 import styled from "styled-components";
-// https://www.npmjs.com/package/marked
+// https://github.com/markedjs/marked
 import { marked } from "marked";
+// https://github.com/markedjs/marked-mangle
+import { mangle } from "marked-mangle";
+// https://github.com/markedjs/marked-gfm-heading-id
+import { gfmHeadingId } from "marked-gfm-heading-id";
 // Components
 import { Button, Row, Col } from "react-bootstrap";
 
@@ -28,9 +32,13 @@ const Markdown = () => {
   const dispatch = useDispatch();
   const { markdown } = useSelector(markdownSelector);
 
-  marked.setOptions({
+  const options = {
+    prefix: "FCC-",
     breaks: true,
-  });
+  };
+
+  marked.use(mangle());
+  marked.use(gfmHeadingId(options));
 
   return (
     <Row>
@@ -70,7 +78,7 @@ const Markdown = () => {
           )}
         </StyledDiv>
       </Col>
-      <Col className="" lg={6}>
+      <Col lg={6}>
         <div
           id="preview"
           className="py-5"
