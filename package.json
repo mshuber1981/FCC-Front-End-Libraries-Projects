@@ -16,7 +16,7 @@
     "react-router-dom": "^6.15.0",
     "remark-breaks": "^3.0.3",
     "remark-gfm": "^3.0.1",
-    "styled-components": "^6.0.7"
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
